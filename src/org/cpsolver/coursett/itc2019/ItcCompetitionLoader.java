@@ -312,7 +312,7 @@ public class ItcCompetitionLoader extends TimetableLoader {
 			} else if ("NotOverlap".equalsIgnoreCase(reference)) {
 				type = GroupConstraint.ConstraintType.DIFF_TIME; positive = true;
 			} else if ("Precedence".equalsIgnoreCase(reference)) {
-				type = GroupConstraint.ConstraintType.PRECEDENCE; positive = true; break;
+				type = GroupConstraint.ConstraintType.PRECEDENCE; positive = true;
 			} else if (reference.matches("WorkDay\\([0-9]+\\)")) {
 				Matcher matcher = Pattern.compile("WorkDay\\(([0-9]+)\\)").matcher(reference);
 		        if (matcher.find()) {
