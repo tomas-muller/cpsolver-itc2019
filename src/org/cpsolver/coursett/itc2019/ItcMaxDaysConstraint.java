@@ -1,4 +1,4 @@
-package org.cpsolver.itc2019.coursett;
+package org.cpsolver.coursett.itc2019;
 
 import java.util.HashMap;
 import java.util.Set;

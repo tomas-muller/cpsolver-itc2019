@@ -3,4 +3,4 @@
  * 
  * @author Tomas Muller
  */
-package org.cpsolver.itc2019.coursett;
+package org.cpsolver.coursett.itc2019;
