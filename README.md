@@ -31,3 +31,6 @@ java -jar target/cpsolver-itc2019-1.0-SNAPSHOT.jar \
   instances/wbg-fal10.xml \
   ./output
 ```
+
+## Publications
+- [ITC 2019: Results Using the UniTime Solver, T. Müller, In PATAT 2022 - Proceedings of the 13th International Conference on the Practice and Theory of Automated Timetabling, Volume III, 2022.](https://www.unitime.org/papers/patat22-unitime.pdf)
