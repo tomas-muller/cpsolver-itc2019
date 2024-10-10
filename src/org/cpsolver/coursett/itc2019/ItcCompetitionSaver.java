@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.cpsolver.coursett.TimetableSaver;
 import org.cpsolver.coursett.constraint.FlexibleConstraint;
 import org.cpsolver.coursett.constraint.GroupConstraint;
@@ -26,7 +26,7 @@ import org.dom4j.io.XMLWriter;
  * @author Tomas Muller
  */
 public class ItcCompetitionSaver extends TimetableSaver {
-	private static Logger sLog = Logger.getLogger(ItcCompetitionSaver.class);
+	private static Logger sLog = org.apache.logging.log4j.LogManager.getLogger(ItcCompetitionSaver.class);
     private File iOutputFolder = null;
 
     public ItcCompetitionSaver(Solver<Lecture, Placement> solver) {
