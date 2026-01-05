@@ -1,6 +1,9 @@
 package org.cpsolver.coursett.itc2019;
 
+import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 import org.cpsolver.coursett.constraint.MaxDaysFlexibleConstraint;
@@ -19,6 +22,7 @@ public class ItcMaxDaysConstraint extends MaxDaysFlexibleConstraint{
 		super(id, owner, preference, reference);
 	}
 	
+	@Override
 	public double getCurrentPreference(Assignment<Lecture, Placement> assignment, Set<Placement> conflicts, HashMap<Lecture, Placement> assignments){
         if (isHard()) return 0;
         int violations = (int) getNrViolations(assignment, conflicts, assignments);
@@ -26,5 +30,13 @@ public class ItcMaxDaysConstraint extends MaxDaysFlexibleConstraint{
         return Math.abs(iPreference) * violations;
     }
 
-
+	@Override
+	public List<BitSet> getWeeks(){
+        // Weeks are not considered in the MaxDays constraint
+        if (iWeeks == null) {
+            iWeeks = new ArrayList<BitSet>();
+            iWeeks.add(null);
+        }
+        return iWeeks;
+    }
 }
