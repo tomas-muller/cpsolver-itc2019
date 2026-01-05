@@ -399,6 +399,11 @@ public class ItcCompetitionLoader extends TimetableLoader {
 		}
 		
         Element solutionEl = root.element("solution");
+        if (getModel().getProperties().getProperty("Load.Solution") != null) {
+        	File solutionFile = new File(getModel().getProperties().getProperty("Load.Solution"));
+        	Document solutionDocument = new SAXReader().read(solutionFile);
+        	solutionEl = solutionDocument.getRootElement();
+        }
         if (solutionEl != null) {
         	iProgress.info("Loading solution...");
     		for (Iterator<?> i = solutionEl.elementIterator("class"); i.hasNext(); ) {
